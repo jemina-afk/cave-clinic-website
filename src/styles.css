@@ -639,3 +639,31 @@ a.row:hover .row-name { font-style: italic; }
   .sticky-bar { visibility: hidden; transition: transform 500ms var(--ease), visibility 0s 500ms; }
   .sticky-bar.is-on { visibility: visible; transition: transform 500ms var(--ease); }
 }
+
+/* ---------- Collage (home) ---------- */
+.collage { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(16px, 3vw, 48px); align-items: start; }
+.cl-col { display: grid; gap: clamp(16px, 3vw, 48px); }
+.cl-col--offset { margin-top: clamp(48px, 10vw, 160px); }
+.cl-pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3vw, 48px); align-items: end; }
+.cl-tile .label { display: block; margin-top: 14px; }
+.cl-tall .media { aspect-ratio: 4 / 5; }
+.cl-wide .media { aspect-ratio: 3 / 2; }
+.cl-square .media { aspect-ratio: 1 / 1; }
+.cl-portrait .media { aspect-ratio: 3 / 4; }
+@media (max-width: 699px) {
+  .collage { grid-template-columns: 1fr; }
+  .cl-col--offset { margin-top: 0; }
+}
+
+/* Academy ebook cover */
+.offer--ebook { grid-template-columns: 160px 1fr auto; align-items: center; }
+.ebook-cover { aspect-ratio: 1097 / 1505; }
+@media (max-width: 699px) { .offer--ebook { grid-template-columns: 1fr; } .ebook-cover { width: 160px; } }
+
+/* Side-by-side result (photos that don't align for a slider) */
+.ba-split { position: relative; aspect-ratio: 4 / 5; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--ivory); }
+.ba-split .media { height: 100%; }
+
+/* Hero over real photography: a little more depth so white text reads */
+.hero::before { background: linear-gradient(to top, rgba(22, 20, 18, 0.5) 0%, rgba(22, 20, 18, 0.3) 45%, rgba(22, 20, 18, 0.14) 100%); }
+.hero::after { background: linear-gradient(to bottom, rgba(22, 20, 18, 0.32), rgba(22, 20, 18, 0)); }

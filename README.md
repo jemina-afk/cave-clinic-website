@@ -11,6 +11,17 @@ build.py     ← turns all of the above into finished pages
 site/        ← the finished website. Upload this folder to your host.
 ```
 
+## Preview online (Netlify, free)
+1. Sign in at https://app.netlify.com with your GitHub account.
+2. Click **Add new site**, then **Import an existing project**, then choose GitHub and pick `cave-clinic-website`.
+3. Leave **Build command** empty. Set **Publish directory** to `site`.
+4. Click **Deploy**. You get a link like `something.netlify.app`, and it updates every time changes are pushed.
+
+## Photos
+The clinic photos, Paris's portrait, the ebook cover and the 4 before/after results come from caveclinic.uk, reused with Paris's permission.
+`data/photos.json` holds each photo's alt text and focal point. Before/after photos are split into halves, left = before.
+Results 1 and 3 show side by side (`"layout": "split"` in `data/results.json`) because the two halves don't line up for a slider.
+
 ## Make a change
 1. Edit a file in `data/`. For example, change a price in `data/treatments.json`.
 2. Rebuild:

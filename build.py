@@ -30,12 +30,23 @@ def find_media(name, exts):
             return name + e
     return None
 
+PHOTOS = D("photos.json")  # real alt text and focal point for each photo in /images
+
+def photo_tag(f, name, alt, eager=False):
+    """<img> for a real photo. data/photos.json alt text wins, so alt always describes the actual picture."""
+    p = PHOTOS.get(name, {})
+    real_alt = p.get("alt", alt) if alt else ""
+    pos = f' style="object-position:{p["pos"]}"' if p.get("pos") else ""
+    w, h = p.get("size", [None, None])
+    dims = f' width="{w}" height="{h}"' if w else ""
+    return (f'<img src="/assets/img/{f}" alt="{esc(real_alt)}"{dims}{pos} '
+            f'{"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async">')
+
 def img(name, alt, label=None, cls="", eager=False, dark=False, attrs=""):
     """A .media box with a real photo if images/<name>.webp|jpg exists, else a labelled placeholder."""
     f = find_media(name, [".webp", ".jpg", ".jpeg", ".png"])
     if f:
-        inner = (f'<img src="/assets/img/{f}" alt="{esc(alt)}" '
-                 f'{"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async">')
+        inner = photo_tag(f, name, alt, eager)
     else:
         inner = ph_html(alt, label, dark)
     return f'<div class="media {cls}" {attrs}>{inner}</div>'
@@ -50,7 +61,7 @@ def ph_html(alt, label, dark=False):
 def img_inner(name, alt, label=None, dark=False, eager=False):
     f = find_media(name, [".webp", ".jpg", ".jpeg", ".png"])
     if f:
-        return f'<img src="/assets/img/{f}" alt="{esc(alt)}" {"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async">'
+        return photo_tag(f, name, alt, eager)
     return ph_html(alt, label, dark)
 
 def video(name, poster, alt, label, dark=True):
@@ -238,6 +249,18 @@ def result_pair(r, i):
     if r.get("review"):
         rev = f'''<div class="review">{STARS}<blockquote>“{esc(r["review"])}”</blockquote>
 <footer><span class="label">{esc(r["name"])}</span><span class="label">Google review</span></footer></div>'''
+    if r.get("layout") == "split":
+        # Side-by-side source photos that don't line up: show both halves next to each other, no slider
+        return f'''
+<article class="rr reveal" data-cat="{r["cat"]}">
+  <div class="ba-split">
+    {img(r["before"], f'Before: {r["treatment"]}', "Consented result to add · Before")}
+    {img(r["after"], f'After: {r["treatment"]}', "Consented result to add · After")}
+    <span class="ba-tag ba-tag--b label">Before</span><span class="ba-tag ba-tag--a label">After</span>
+  </div>
+  <div class="rr-cap"><span class="label" style="color:var(--ink)">{esc(r["treatment"])}</span><span class="label">Results vary</span></div>
+  {rev}
+</article>'''
     return f'''
 <article class="rr reveal" data-cat="{r["cat"]}">
   <div class="ba">
@@ -312,17 +335,17 @@ def secret_section(h="h2", extra_copy="", title="The CAVE Secret™", label="Sig
   </div>
 </section>'''
 
-WALK = [("01", "The arrival", "Sheer curtains, bouclé chairs and a marble table.", "walk-arrival", "Sheer curtains, cream bouclé chairs and a round marble table at the clinic entrance", None),
-        ("02", "The lounge", "A chocolate bouclé sofa, candles and quiet.", "walk-lounge", "The lounge with a chocolate bouclé sofa and lit candles", None),
-        ("03", "The treatment suite", "A sculptural lounger beneath an arched mirror.", "walk-suite", "The treatment suite with a sculptural cream lounger and an arched mirror", "walk-suite"),
-        ("04", "The details", "Brass wall lights, plaster art and the CAVE menu.", "walk-details", "Brass wall lights, plaster artwork and the printed CAVE menu", None)]
+WALK = [("01", "The arrival", "Sheer curtains, bouclé, marble and the CAVE menu.", "walk-arrival", "A marble table with the CAVE menu beside a bouclé chair and sheer curtains", None),
+        ("02", "The lounge", "A bouclé sofa, an arched mirror and daylight.", "walk-lounge", "The lounge with a cream bouclé sofa, an arched mirror and tall windows", None),
+        ("03", "The treatment suite", "A tufted lounger beneath plaster art and an arched door.", "walk-suite", "The treatment suite with a tufted lounger, an arched door and plaster wall art", "walk-suite"),
+        ("04", "The details", "Brass wall lights and textured plaster artwork.", "walk-details", "Brass wall lights and textured plaster artwork on panelled walls", None)]
 
 def walkthrough():
     frames = ""
     for n, name, line, im, alt, vid in WALK:
         media = video(vid, im, alt, f"Clinic film to add · {name}", dark=False) if vid else img_inner(im, alt, f"Clinic photo to add · {name}")
         play = ""
-        if vid:
+        if vid and video_src(vid):
             play = f'<button class="btn btn--ivory btn--sm walk-play" type="button" data-play="{video_src(vid + "-full") or video_src(vid)}" data-title="The treatment suite">Play with sound</button>'
         frames += f'''
 <figure class="walk-frame" tabindex="0" aria-roledescription="slide" aria-label="{n} of 04, {name}" style="margin:0">
@@ -432,7 +455,7 @@ def founder_split(h_tag="h2"):
   <div class="container founder">
     <div class="founder-media">
       {img("paris-portrait", "Portrait of Paris Tyrell, founder of CAVE Clinic, in soft daylight", "Portrait to add · Paris", cls="arch clip")}
-      {img("paris-at-work", "Paris Tyrell assessing a client's profile in the treatment suite", "Photo to add · Paris at work", cls="founder-inset clip", attrs='style="--d:300ms"')}
+      {img("walk-details", "Brass wall lights and plaster artwork at CAVE Clinic", "Photo to add", cls="founder-inset clip", attrs='style="--d:300ms"')}
     </div>
     <div data-stagger>
       <span class="label reveal">Founder</span>
@@ -441,6 +464,34 @@ def founder_split(h_tag="h2"):
       <hr class="brass-rule reveal">
       <span class="label reveal">Natural-results specialist</span>
       <div class="actions reveal" style="margin-top:28px"><a class="link" href="/paris/">Meet Paris</a></div>
+    </div>
+  </div>
+</section>'''
+
+def collage():
+    """Editorial collage of the clinic: two offset columns of photos at mixed sizes."""
+    tile = lambda name, cls, cap="": (
+        f'<figure class="cl-tile {cls}" style="margin:0">{img(name, "", "", cls="clip")}'
+        f'{f"<figcaption class=label>{cap}</figcaption>" if cap else ""}</figure>')
+    return f'''
+<section class="section collage-sec" aria-labelledby="inside-h">
+  <div class="container">
+    <div class="section-head split-head" data-stagger>
+      <div><span class="label reveal">Inside CAVE</span><h2 class="h2 reveal" id="inside-h">A room made for <em>quiet</em>.</h2></div>
+      <a class="link reveal" href="{SITE["instagram"]}" target="_blank" rel="noopener">More on {SITE["instagramHandle"]}<span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+    <div class="collage" data-stagger>
+      <div class="cl-col">
+        {tile("walk-arrival", "cl-tall", "The arrival")}
+        {tile("walk-suite", "cl-wide", "The treatment suite")}
+      </div>
+      <div class="cl-col cl-col--offset">
+        {tile("walk-lounge", "cl-wide", "The lounge")}
+        <div class="cl-pair">
+          {tile("walk-details", "cl-square", "The details")}
+          {tile("paris-portrait", "cl-portrait", "Paris")}
+        </div>
+      </div>
     </div>
   </div>
 </section>'''
@@ -485,6 +536,7 @@ def home():
   </div>
 </section>
 {quotes()}
+{collage()}
 <section class="section" aria-labelledby="ev-h">
   <div class="container">
     <div class="section-head" data-stagger><span class="label reveal">Events</span><h2 class="h2 reveal" id="ev-h">More than appointments.</h2></div>
@@ -617,7 +669,8 @@ def cave_secret():
 def clinic():
     media = video("tour", "tour-poster", "A slow walkthrough of CAVE Clinic, from the entrance to the treatment suite", "Clinic tour film to add")
     body = hero("The clinic", '<h1 class="h1" style="margin-top:20px">Step inside.</h1>', "A quiet, light-filled space at Ivy Mill, Failsworth.",
-                actions=f'<button class="btn btn--ivory" type="button" data-play="{video_src("tour-full") or video_src("tour")}" data-title="The clinic tour">Play the tour</button>' + book("Book", "link link--light"),
+                actions=(f'<button class="btn btn--ivory" type="button" data-play="{video_src("tour-full") or video_src("tour")}" data-title="The clinic tour">Play the tour</button>' + book("Book", "link link--light"))
+                        if video_src("tour") else book("Book a consultation", "btn btn--ivory"),
                 media=media, full=False)
     rooms = ""
     for n, name, line, im, alt, vid in WALK:
@@ -691,7 +744,8 @@ def team_page():
 
 def results_page():
     filt = "".join(f'<button class="filter-btn" type="button" data-value="{v}" aria-pressed="{"true" if v == "all" else "false"}">{t}</button>'
-                   for v, t in [("all", "All"), ("facial-balancing", "Facial balancing"), ("lips", "Lips"), ("profile", "Profile"), ("skin", "Skin")])
+                   for v, t in [("all", "All"), ("facial-balancing", "Facial balancing"), ("lips", "Lips"), ("profile", "Profile"), ("skin", "Skin")]
+                   if v == "all" or any(r["cat"] == v for r in RESULTS))
     body = page_hero("Results", "Subtle, by design.", "Consented client results only. Every face is different, and results vary.")
     body += f'''
 <section class="section" style="padding-top:0"><div class="container">
@@ -724,7 +778,7 @@ def academy_page():
     body = page_hero("Learn with CAVE", "CAVE Academy", "Learn the natural-results approach, from the ebook to 1-1 training with Paris.")
     body += f'''
 <section class="section" style="padding-top:0"><div class="container">
-  <div class="offer reveal"><div><span class="label">The ebook</span><h2 class="h3" style="font-size:32px;font-weight:400;margin:10px 0">The viral CAVE ebook</h2><p>The guide clients and practitioners keep asking for. [Price and summary to confirm]</p></div>
+  <div class="offer offer--ebook reveal">{img("academy-ebook", "Cover of The Social Media Cheat Code ebook", "Ebook cover to add", cls="ebook-cover")}<div><span class="label">The ebook</span><h2 class="h3" style="font-size:32px;font-weight:400;margin:10px 0">The Social Media Cheat Code</h2><p>The viral CAVE ebook. [Price and summary to confirm]</p></div>
   <a class="btn" href="https://learn.caveclinic.uk/" target="_blank" rel="noopener">Buy the ebook<span class="sr-only"> (opens in a new tab)</span></a></div>
   <div class="offer reveal" style="border-bottom:1px solid var(--hair)"><div><span class="label">1-1 training</span><h2 class="h3" style="font-size:32px;font-weight:400;margin:10px 0">One student a month.</h2><p>Only one student a month joins the CAVE Training Academy. Join the waitlist below.</p></div>
   <a class="link" href="#waitlist">Join the waitlist</a></div>

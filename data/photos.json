@@ -1,0 +1,250 @@
+{
+  "hero-poster": {
+    "alt": "A light-filled room at CAVE Clinic with a cream bouclé sofa, a round ottoman, an arched mirror and tall windows",
+    "pos": "40% 55%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "find-lounge": {
+    "alt": "A light-filled room at CAVE Clinic with a cream bouclé sofa, a round ottoman, an arched mirror and tall windows",
+    "pos": "36% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "walk-lounge": {
+    "alt": "A light-filled room at CAVE Clinic with a cream bouclé sofa, a round ottoman, an arched mirror and tall windows",
+    "pos": "36% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "menu-2": {
+    "alt": "A light-filled room at CAVE Clinic with a cream bouclé sofa, a round ottoman, an arched mirror and tall windows",
+    "pos": "36% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "journal-home-salon": {
+    "alt": "A light-filled room at CAVE Clinic with a cream bouclé sofa, a round ottoman, an arched mirror and tall windows",
+    "pos": "36% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "walk-suite": {
+    "alt": "The CAVE Clinic treatment suite: a tufted treatment lounger, an arched door, plaster wall art and the CAVE sign",
+    "pos": "62% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "tour-poster": {
+    "alt": "The CAVE Clinic treatment suite: a tufted treatment lounger, an arched door, plaster wall art and the CAVE sign",
+    "pos": "62% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "secret-hero": {
+    "alt": "The CAVE Clinic treatment suite: a tufted treatment lounger, an arched door, plaster wall art and the CAVE sign",
+    "pos": "62% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "menu-3": {
+    "alt": "The CAVE Clinic treatment suite: a tufted treatment lounger, an arched door, plaster wall art and the CAVE sign",
+    "pos": "62% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "journal-facial-secrets": {
+    "alt": "The CAVE Clinic treatment suite: a tufted treatment lounger, an arched door, plaster wall art and the CAVE sign",
+    "pos": "62% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "journal-facial-balancing": {
+    "alt": "The CAVE Clinic treatment suite: a tufted treatment lounger, an arched door, plaster wall art and the CAVE sign",
+    "pos": "30% 50%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "clinic-entrance": {
+    "alt": "The CAVE Clinic treatment suite: a tufted treatment lounger, an arched door, plaster wall art and the CAVE sign",
+    "pos": "62% 60%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "walk-details": {
+    "alt": "Brass and opal glass wall lights, panelled white walls and textured plaster artwork at CAVE Clinic",
+    "pos": "35% 40%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "menu-4": {
+    "alt": "Brass and opal glass wall lights, panelled white walls and textured plaster artwork at CAVE Clinic",
+    "pos": "28% 40%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "journal-media": {
+    "alt": "Brass and opal glass wall lights, panelled white walls and textured plaster artwork at CAVE Clinic",
+    "pos": "35% 40%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "walk-arrival": {
+    "alt": "Overhead view of a marble side table with a coffee cup and the CAVE Clinic menu, beside a bouclé chair and sheer curtains",
+    "pos": "50% 45%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "menu-1": {
+    "alt": "Overhead view of a marble side table with a coffee cup and the CAVE Clinic menu, beside a bouclé chair and sheer curtains",
+    "pos": "48% 45%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "journal-ethics": {
+    "alt": "Overhead view of a marble side table with a coffee cup and the CAVE Clinic menu, beside a bouclé chair and sheer curtains",
+    "pos": "48% 45%",
+    "size": [
+      2400,
+      1350
+    ]
+  },
+  "final-table": {
+    "alt": "Overhead view of a marble side table with a coffee cup and the CAVE Clinic menu, beside a bouclé chair and sheer curtains",
+    "pos": "50% 50%",
+    "size": [
+      2400,
+      1034
+    ]
+  },
+  "journal-skin-boosters": {
+    "alt": "Overhead view of a marble side table with a coffee cup and the CAVE Clinic menu, beside a bouclé chair and sheer curtains",
+    "pos": "50% 50%",
+    "size": [
+      2400,
+      1034
+    ]
+  },
+  "paris-portrait": {
+    "alt": "Paris Tyrell, founder of CAVE Clinic, in black CAVE scrubs in front of white curtains",
+    "pos": "50% 28%",
+    "size": [
+      2400,
+      3600
+    ]
+  },
+  "team-paris": {
+    "alt": "Paris Tyrell, founder of CAVE Clinic, in black CAVE scrubs in front of white curtains",
+    "pos": "50% 25%",
+    "size": [
+      2400,
+      3600
+    ]
+  },
+  "academy-ebook": {
+    "alt": "Cover of The Social Media Cheat Code ebook by CAVE Clinic, with an embossed fingerprint",
+    "pos": "50% 50%",
+    "size": [
+      1097,
+      1505
+    ]
+  },
+  "result-1-before": {
+    "alt": "Before: side profile of a CAVE Clinic client, shared with consent",
+    "pos": "60% 50%",
+    "size": [
+      1250,
+      2500
+    ]
+  },
+  "result-1-after": {
+    "alt": "After: the same client's side profile, with a more balanced nose, lips and chin",
+    "pos": "60% 50%",
+    "size": [
+      1250,
+      2500
+    ]
+  },
+  "result-2-before": {
+    "alt": "Before: front view of a CAVE Clinic client's lips, shared with consent",
+    "pos": "50% 50%",
+    "size": [
+      645,
+      1290
+    ]
+  },
+  "result-2-after": {
+    "alt": "After: the same client with fuller, more defined lips",
+    "pos": "50% 50%",
+    "size": [
+      645,
+      1290
+    ]
+  },
+  "result-3-before": {
+    "alt": "Before: side profile of a CAVE Clinic client's chin and jaw, shared with consent",
+    "pos": "45% 50%",
+    "size": [
+      645,
+      1290
+    ]
+  },
+  "result-3-after": {
+    "alt": "After: the same client with a more defined chin and jawline",
+    "pos": "45% 50%",
+    "size": [
+      645,
+      1290
+    ]
+  },
+  "result-4-before": {
+    "alt": "Before: front view of a CAVE Clinic client's face, shared with consent",
+    "pos": "50% 50%",
+    "size": [
+      645,
+      1290
+    ]
+  },
+  "result-4-after": {
+    "alt": "After: the same client with a softer, more balanced face",
+    "pos": "50% 50%",
+    "size": [
+      645,
+      1290
+    ]
+  }
+}

@@ -1,8 +1,6 @@
 [
-  { "cat": "facial-balancing", "treatment": "Facial balancing, Refine 3ml", "before": "result-1-before", "after": "result-1-after", "review": "The best experience. Paris is so lovely and warm and really listens to what you want.", "name": "Rachel Davis" },
-  { "cat": "lips", "treatment": "Lips, 1ml", "before": "result-2-before", "after": "result-2-after", "review": "Paris is the best of the best! Wouldn't trust anyone else.", "name": "Olivia Middlehurst" },
-  { "cat": "profile", "treatment": "Chin and jawline", "before": "result-3-before", "after": "result-3-after", "review": "She's incredibly detail-oriented and cares about getting the best result for you.", "name": "Lucy Thorpe" },
-  { "cat": "skin", "treatment": "The Glass Skin Ritual with Alix", "before": "result-4-before", "after": "result-4-after", "review": "I travelled from Scotland for this facial, will not go anywhere else.", "name": "R Thomson" },
-  { "cat": "profile", "treatment": "Non-surgical rhinoplasty", "before": "result-5-before", "after": "result-5-after", "review": "", "name": "" },
-  { "cat": "lips", "treatment": "Lips, 0.7ml", "before": "result-6-before", "after": "result-6-after", "review": "", "name": "" }
+  { "cat": "profile", "treatment": "Profile balancing", "before": "result-1-before", "after": "result-1-after", "layout": "split", "review": "", "name": "" },
+  { "cat": "lips", "treatment": "Lips", "before": "result-2-before", "after": "result-2-after", "review": "", "name": "" },
+  { "cat": "profile", "treatment": "Chin and jawline", "before": "result-3-before", "after": "result-3-after", "layout": "split", "review": "", "name": "" },
+  { "cat": "facial-balancing", "treatment": "Facial balancing", "before": "result-4-before", "after": "result-4-after", "review": "", "name": "" }
 ]
