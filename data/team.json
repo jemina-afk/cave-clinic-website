@@ -1,0 +1,20 @@
+[
+  {
+    "id": "paris",
+    "name": "Paris Tyrell",
+    "role": "Founder & aesthetic practitioner",
+    "image": "team-paris",
+    "alt": "Paris Tyrell, founder of CAVE Clinic, in the treatment suite",
+    "bio": "Paris leads every facial balancing plan, built on The CAVE Secret™.",
+    "link": "/treatments/?practitioner=paris"
+  },
+  {
+    "id": "alix",
+    "name": "Alix",
+    "role": "Skin specialist, facials and peels",
+    "image": "team-alix",
+    "alt": "Alix, skin specialist at CAVE Clinic",
+    "bio": "Alix looks after skin, with facials, peels and microneedling.",
+    "link": "/treatments/?practitioner=alix"
+  }
+]

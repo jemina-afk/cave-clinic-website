@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Galentine's evening",
+    "date": "February · Date to confirm",
+    "line": "An evening of treatments, bubbles and friends at the clinic.",
+    "image": "event-galentines",
+    "alt": "Candlelit marble table set for the Galentine's evening at CAVE Clinic",
+    "past": false
+  },
+  {
+    "title": "Wellness morning",
+    "date": "Date to confirm",
+    "line": "A slow morning of skin, breathwork and calm.",
+    "image": "event-wellness",
+    "alt": "The CAVE lounge in morning light, set for a wellness morning",
+    "past": false
+  },
+  {
+    "title": "London dates",
+    "date": "Announced on Instagram",
+    "line": "Exclusive treatment days in London for a limited number of clients.",
+    "image": "event-london",
+    "alt": "Paris Tyrell preparing for a London treatment day",
+    "past": false
+  }
+]

@@ -1,0 +1,1 @@
+window.CAVE_LOCATIONS = [{"id": "ivy-mill", "days": [1, 2, 4, 5, 6], "today": "Today we're at Ivy Mill, Failsworth"}, {"id": "city-centre", "days": [3, 0], "today": "Today we're in Manchester city centre"}];

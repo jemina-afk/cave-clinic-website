@@ -1,0 +1,503 @@
+[
+  {
+    "id": "consultations",
+    "name": "Consultations",
+    "nav": false,
+    "image": "treat-consultation",
+    "intro": "Every treatment starts here. We listen first, then plan.",
+    "rows": [
+      {
+        "name": "Video consultation",
+        "price": "£15",
+        "value": 15,
+        "desc": "A WhatsApp video call to talk through your goals.",
+        "practitioner": "paris alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "In-person consultation",
+        "price": "£30",
+        "value": 30,
+        "desc": "A full face assessment at the clinic.",
+        "practitioner": "paris alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "facial-balancing",
+    "name": "Facial balancing",
+    "home": "Facial balancing",
+    "from": "From £350",
+    "image": "treat-facial-balancing",
+    "homeDesc": "A whole-face plan built on The CAVE Secret™.",
+    "intro": "Up to 3 areas from lips, nose, cheeks, chin and jaw, planned as one.",
+    "rows": [
+      {
+        "name": "Tweak, 2ml",
+        "price": "£350",
+        "value": 350,
+        "desc": "A first step towards balance across up to 3 areas.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Refine, 3ml",
+        "price": "£450",
+        "value": 450,
+        "desc": "Our most chosen plan for gentle, whole-face harmony.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": true,
+        "note": ""
+      },
+      {
+        "name": "Enhance, 4ml",
+        "price": "£550",
+        "value": 550,
+        "desc": "More structure where your face needs it most.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Modify, 5ml",
+        "price": "£700",
+        "value": 700,
+        "desc": "A fuller plan for profile and proportion.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Transform (full plan)",
+        "price": "Consultation-led",
+        "value": null,
+        "desc": "A complete plan, designed with you at consultation.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "The Mummy Makeover",
+        "price": "Consultation-led",
+        "value": null,
+        "desc": "A restorative plan for new mums, tailored at consultation.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "lips-profile",
+    "name": "Lips & profile",
+    "home": "Lips & profile",
+    "from": "From £130",
+    "image": "treat-lips",
+    "homeDesc": "Shape, symmetry and a softer, balanced profile.",
+    "intro": "Single-area treatments, always planned around your whole face.",
+    "rows": [
+      {
+        "name": "Lips, 0.5ml",
+        "price": "£130",
+        "value": 130,
+        "desc": "A subtle lift in hydration and shape.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Lips, 0.7ml",
+        "price": "£180",
+        "value": 180,
+        "desc": "Soft definition with natural movement.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Lips, 1ml",
+        "price": "£230",
+        "value": 230,
+        "desc": "Shape and balance for fuller lips.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Cheeks, 1ml",
+        "price": "£300",
+        "value": 300,
+        "desc": "Gentle mid-face lift and structure.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Cheeks, 2ml",
+        "price": "£400",
+        "value": 400,
+        "desc": "More support for the mid-face.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Chin",
+        "price": "£200",
+        "value": 200,
+        "desc": "Projection to ground and balance the profile.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Jawline, 1ml",
+        "price": "£300",
+        "value": 300,
+        "desc": "Soft definition along the jaw.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Jawline, 2ml",
+        "price": "£500",
+        "value": 500,
+        "desc": "A cleaner, sculpted lower face.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Nasolabial folds",
+        "price": "£300",
+        "value": 300,
+        "desc": "Softens the lines from nose to mouth.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Jowls",
+        "price": "£200",
+        "value": 200,
+        "desc": "Support for a smoother lower face.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Non-surgical rhinoplasty",
+        "price": "£270",
+        "value": 270,
+        "desc": "Smooths and straightens the nose profile.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Tip lift",
+        "price": "£160",
+        "value": 160,
+        "desc": "A subtle lift at the tip of the nose.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Dorsal hump",
+        "price": "£150",
+        "value": 150,
+        "desc": "Smooths the bridge of the nose.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Review",
+        "price": "£30",
+        "value": 30,
+        "desc": "A check-in after your treatment.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "skin-boosters",
+    "name": "Skin boosters",
+    "home": "Skin boosters",
+    "from": "From £150",
+    "image": "treat-skin-boosters",
+    "homeDesc": "Hydration and glow from within.",
+    "intro": "Injectable skincare for bounce, texture and light.",
+    "rows": [
+      {
+        "name": "Profhilo®",
+        "price": "£300",
+        "value": 300,
+        "desc": "Deep hydration for firmer, bouncier skin.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "10-point face lift (Profhilo®)",
+        "price": "£300",
+        "value": 300,
+        "desc": "A placement technique for lift and glow.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Under-eye brightening",
+        "price": "£150",
+        "value": 150,
+        "desc": "Refreshes tired, hollow under-eyes.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Seventy Hyal",
+        "price": "£160",
+        "value": 160,
+        "desc": "Hydration and radiance for dull skin.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Anti-acne",
+        "price": "£175",
+        "value": 175,
+        "desc": "Calms breakouts and supports clearer skin.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "skin-facials",
+    "name": "Skin & facials",
+    "home": "Skin & facials with Alix",
+    "from": "From £85",
+    "image": "treat-facials",
+    "homeDesc": "Facials, peels and microneedling with Alix.",
+    "intro": "Results-led facials and peels with Alix, our skin specialist.",
+    "rows": [
+      {
+        "name": "The Fresh Glow",
+        "price": "£85",
+        "value": 85,
+        "desc": "A brightening facial for instant radiance.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "The Glass Skin Ritual",
+        "price": "£95",
+        "value": 95,
+        "desc": "Deep hydration for a smooth, luminous finish.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "The Smooth Renewal",
+        "price": "£90",
+        "value": 90,
+        "desc": "Refines texture for softer, smoother skin.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Exosome microneedling",
+        "price": "£125",
+        "value": 125,
+        "desc": "Microneedling with exosomes for renewal.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "The Clear Skin Peel",
+        "price": "£95",
+        "value": 95,
+        "desc": "Targets congestion and breakouts.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": "Course of 4: £300"
+      },
+      {
+        "name": "The Bright Peel",
+        "price": "£90",
+        "value": 90,
+        "desc": "Evens tone and lifts dullness.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "The Renew Peel",
+        "price": "£90",
+        "value": 90,
+        "desc": "Resurfaces for fresher-looking skin.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Microneedling",
+        "price": "£100",
+        "value": 100,
+        "desc": "Supports collagen, texture and scarring.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Derma rolling",
+        "price": "£150",
+        "value": 150,
+        "desc": "Gentle collagen induction for texture.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Microneedling, course of 4",
+        "price": "£300",
+        "value": 300,
+        "desc": "Four sessions for lasting change.",
+        "practitioner": "alix",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "body-contouring",
+    "name": "Body contouring",
+    "home": "Body contouring",
+    "from": "From £100",
+    "image": "treat-body",
+    "homeDesc": "Non-surgical contouring for stubborn areas.",
+    "intro": "Non-surgical treatments for areas that don't shift.",
+    "rows": [
+      {
+        "name": "Under chin",
+        "price": "£100",
+        "value": 100,
+        "desc": "Refines the area under the chin.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Abdomen",
+        "price": "From £300",
+        "value": 300,
+        "desc": "Contouring for the stomach area.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Legs, underarms or back",
+        "price": "From £200",
+        "value": 200,
+        "desc": "Contouring for smaller body areas.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "wellbeing",
+    "name": "Wellbeing",
+    "image": "treat-wellbeing",
+    "intro": "Supportive treatments, always after a consultation.",
+    "rows": [
+      {
+        "name": "Filler dissolving",
+        "price": "£110 per area",
+        "value": 110,
+        "desc": "Safely reverses previous filler.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      },
+      {
+        "name": "Vitamin injections",
+        "price": "Consultation-led",
+        "value": null,
+        "desc": "Discussed and suitability checked at consultation.",
+        "practitioner": "paris",
+        "duration": "",
+        "popular": false,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "anti-wrinkle",
+    "name": "Anti-wrinkle",
+    "home": "Anti-wrinkle",
+    "from": "Consultation-led",
+    "image": "treat-anti-wrinkle",
+    "homeDesc": "Injections to soften expression lines.",
+    "rows": []
+  }
+]
